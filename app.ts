@@ -85,3 +85,74 @@ function func(obj :user){
     obj.gender
 }
 func({name : "khushal",email :"khushla@gmail.com",password:"2536",gender : "male"})
+
+
+interface parent {
+    speak : boolean
+}
+interface child extends parent{
+    coding : boolean
+}
+function func1(obj :child){
+    obj.coding
+    obj.speak
+}
+func1({speak : true,coding: true})
+
+// type aliases
+
+type sankha = number
+let val1 : sankha
+val1 = 67
+
+type value = number | string | null
+function func2(val2 : value,val3 : value){
+
+}
+func2("khushal",78)
+
+// unon
+let val4 : number | string
+
+// intersection type
+type User = {
+    name : string
+    email : string
+}
+type Admin = User & {
+    getDetails(val5 : string): void
+}
+function func3(obj : Admin){
+    obj.getDetails
+}
+
+// class and object
+
+class Device{
+    name = "mouse"
+    price = 8000
+}
+let obj14 = new Device()
+
+// constructor
+
+class bottlemekar{
+    constructor(public size : number,public colour : string){
+
+    }
+}
+let obj2 = new bottlemekar(34,"green")
+let obj3 = new bottlemekar(34,"pink")
+
+// this keyword
+
+class penmekar{
+    constructor(public size : number,public ink : string = "bule"){
+        if(size < 11){
+            console.log("less than 11 size is",size)
+        }
+    }
+}
+let pen1 = new penmekar(44,"bule")
+let pen2 = new penmekar(4,"black")
+let pen3 = new penmekar(10)
