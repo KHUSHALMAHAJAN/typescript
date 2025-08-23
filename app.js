@@ -87,11 +87,11 @@ class bottlemekar {
     constructor(size, colour) {
         this.size = size;
         this.colour = colour;
+        console.log(colour);
     }
 }
 let obj2 = new bottlemekar(34, "green");
 let obj3 = new bottlemekar(34, "pink");
-// this keyword
 class penmekar {
     constructor(size, ink = "bule") {
         this.size = size;
@@ -104,3 +104,15 @@ class penmekar {
 let pen1 = new penmekar(44, "bule");
 let pen2 = new penmekar(4, "black");
 let pen3 = new penmekar(10);
+// this keyword
+class changename {
+    constructor() {
+        this.name = "khushal";
+    }
+    changenamefunc() {
+        this.name = "kunal";
+        console.log(this.name);
+    }
+}
+let obj4 = new changename();
+obj4.changenamefunc();

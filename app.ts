@@ -87,6 +87,7 @@ function func(obj :user){
 func({name : "khushal",email :"khushla@gmail.com",password:"2536",gender : "male"})
 
 
+// extends
 interface parent {
     speak : boolean
 }
@@ -138,13 +139,12 @@ let obj14 = new Device()
 
 class bottlemekar{
     constructor(public size : number,public colour : string){
-
+        console.log(colour)
     }
 }
 let obj2 = new bottlemekar(34,"green")
 let obj3 = new bottlemekar(34,"pink")
 
-// this keyword
 
 class penmekar{
     constructor(public size : number,public ink : string = "bule"){
@@ -156,3 +156,17 @@ class penmekar{
 let pen1 = new penmekar(44,"bule")
 let pen2 = new penmekar(4,"black")
 let pen3 = new penmekar(10)
+
+
+
+// this keyword
+class changename{
+    name = "khushal"
+    changenamefunc(){
+        this.name = "kunal"
+        console.log(this.name)
+    }
+}
+let obj4 = new changename()
+obj4.changenamefunc()
+
