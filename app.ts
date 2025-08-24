@@ -170,3 +170,112 @@ class changename{
 let obj4 = new changename()
 obj4.changenamefunc()
 
+
+
+// private protected public
+class parent1{
+    constructor(private name :string){
+
+    }
+    changename():void{
+        console.log(this.name)
+    }
+}
+let obj5 = new parent1("khushal")
+
+class parent2{
+    constructor(protected name :string){
+
+    }
+    protected show(){
+        console.log(this.name)
+    }
+}
+class child2 extends parent2{
+    constructor(protected name :string){
+        super(name)
+    }
+    showname(){
+        console.log(this.name)
+        this.show()
+    }
+}
+let obj6 = new child2("khushal")
+
+
+// readonly
+
+class parent3{
+    constructor(private readonly name :string){
+
+    }
+}
+let obj7 = new parent3("khushal")
+
+// option parameter
+class parent4{
+    constructor(private name : string ,private age? : number){
+
+    }
+}
+let obj8 = new parent4("khushal",90)
+let obj9 = new parent4("kunal")
+
+// parameter property
+class parent5{
+    public name
+    constructor(name : string){
+        this.name = name 
+    }
+}
+let obj10 = new parent5("khushal")
+
+// setter and getter
+class parent6{
+    constructor(private name :string){
+
+    }
+    set setname(nam:string){
+        this.name = nam
+    }
+    get getname(){
+        return this.name
+    }
+}
+let obj11 = new parent6("kunal")
+
+
+// static
+class parent7{
+    static getradomnumber(){
+        return Math.floor(Math.random()*40)
+    }
+}
+
+// abstract class and method
+// it is threy of abstract class :- it use only base class
+
+// function type
+function func4(name : string,cb : (arg : string) => void){
+    cb("payal")
+}
+func4("khushal",(arg : string) => {
+    console.log(arg)
+})
+
+
+// Option parameter
+function func5(name : string,email : string, age? : number){
+    console.log(name)
+    console.log(age)
+    console.log(email)
+}
+func5("khushal","khushal@")
+
+
+// default parameter
+function func6(name :string,age : number = 20){
+    console.log(name)
+    console.log(age)
+}
+func6("payal")
