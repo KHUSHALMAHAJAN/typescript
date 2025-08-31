@@ -1,0 +1,90 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Registration Form */
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff9800;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+input {
+    background: #2c2c2c;
+    color: white;
+}
+
+button {
+    background: #ff9800;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e68900;
+}
+
+/* Spread Input Box (Middle Search Bar) */
+.spread-input-container {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.spread-input-container input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: #1f1f1f;
+    color: white;
+}
+
+/* Cards Section */
+#cardconatiner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background: #1f1f1f;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: #2c2c2c;
+}

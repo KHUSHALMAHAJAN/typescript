@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var a = 9;
 var j = "khushal";
 //array
@@ -240,7 +241,7 @@ function func11(obj) {
     console.log(typeof obj.value2);
 }
 func11({ value1: "khushal", value2: 90 });
-// generics class
+// generics interface
 class parent8 {
     constructor(key) {
         this.key = key;
@@ -250,55 +251,5 @@ class parent8 {
 }
 let obj12 = new parent8("payal");
 // exporting and importing module
-// import module from "./payment";
-// let obj13 = new module("payal")
-// type Assertion  
-let val7 = "payal";
-val7;
-console.log("jhd");
-console.log(typeof val7);
-// type casting
-let val8 = Number("90");
-console.log(typeof val8);
-// Non-null asserting operator
-let val9 = null;
-if (val9) {
-    console.log("correct");
-}
-else {
-    console.log("worng");
-}
-// type guard
-function func12(val10) {
-    if (typeof val10 === "number") {
-        console.log("number");
-    }
-    else if (typeof val10 === "string") {
-        console.log("string");
-    }
-    else {
-        throw new Error("error hai bhai");
-    }
-}
-func12("kunal");
-class parent9 {
-    parenet9func() {
-        console.log("parent 9 khushal");
-    }
-}
-class parent10 {
-    parenet10func() {
-        console.log("parent 10 kunal");
-    }
-}
-let obj15 = new parent9();
-let obj16 = new parent10();
-function func13(device) {
-    if (device instanceof parent9) {
-        device.parenet9func();
-    }
-    else if (device instanceof parent10) {
-        device.parenet10func();
-    }
-}
-func13(obj15);
+const payment_1 = require("./payment");
+let obj13 = new payment_1.default("payal");

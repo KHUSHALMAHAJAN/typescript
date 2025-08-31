@@ -279,3 +279,125 @@ function func6(name :string,age : number = 20){
     console.log(age)
 }
 func6("payal")
+
+// rest parameter
+function func7(... argus:number[]){
+    console.log(argus)
+}
+func7(1,2,3,4,5,6,7,8,9,10)
+
+// overloding
+
+function func8(name : string,age : number): void 
+function func8(name : string):void
+
+function func8(name : string ,age ?: number){
+    if(typeof name === "string" && typeof age === "number"){
+        console.log("first function call")
+    }
+    else if(typeof name === "string" && typeof age === "undefined"){
+        console.log("second function call")
+    }
+    else throw new Error("pagal ahe ka")    
+}
+
+func8("kunal",19)
+func8("khushal")
+// func8()
+
+
+// generics
+// generics function
+
+function func9<T>(val6 : T){
+    console.log(typeof val6)
+}
+// console.log("breake")
+func9("payal")
+func9<number>(45)
+
+// generics interface
+interface base<K>{
+    value1 : K
+    value2 : number
+}
+function func11(obj : base<string>){
+    console.log(typeof obj.value1)
+    console.log(typeof obj.value2)
+}
+func11({value1 :"khushal",value2 : 90})
+
+
+// generics class
+class parent8<T>{
+    constructor(public key : T){ 
+        console.log(key)
+        console.log(typeof key)
+    }
+}
+let obj12 = new parent8<string>("payal")
+
+
+// exporting and importing module
+
+// import module from "./payment";
+// let obj13 = new module("payal")
+
+// type Assertion  
+
+let val7 : any = "payal"
+val7 as string
+console.log("jhd")
+console.log(typeof val7)
+
+// type casting
+let val8 = Number("90")
+console.log(typeof val8)
+
+// Non-null asserting operator
+let val9 = null
+if(val9!){
+    console.log("correct")
+}
+else{
+    console.log("worng")
+}
+
+// type guard
+function func12(val10 : string | number ){
+    if(typeof val10 === "number"){
+        console.log("number")
+    }
+    else if(typeof val10 === "string"){
+        console.log("string")
+    }
+    else{
+        throw new Error("error hai bhai")
+    }
+}
+func12("kunal")
+
+class parent9{
+    parenet9func(){
+        console.log("parent 9 khushal")
+    }
+}
+
+class parent10{
+    parenet10func(){
+        console.log("parent 10 kunal")
+    }
+}
+
+let obj15 = new parent9()
+let obj16 = new parent10()
+
+function func13(device : parent9 | parent10){
+    if(device instanceof parent9){
+        device.parenet9func()
+    }
+    else if(device instanceof parent10){
+        device.parenet10func()
+    }
+}
+func13(obj15)
